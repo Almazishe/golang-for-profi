@@ -9,7 +9,7 @@ import (
 
 func main() {
 	arguments := os.Args
-	if len(arguments) == 1  {
+	if len(arguments) == 1 {
 		log.Fatalln("Needed arguments not found.")
 	}
 
@@ -27,7 +27,6 @@ func main() {
 			if mode.IsRegular() {
 				if mode&0111 != 0 {
 					fmt.Println(fullPath)
-					return
 				}
 			}
 		}
